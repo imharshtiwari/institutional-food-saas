@@ -26,11 +26,11 @@ Exact versions are **not recorded yet**. They are pinned after being verified to
 ## 3. Repository layout
 
 ```text
-institutional-food-platform/
+institutional-food-saas/
   docs/        permanent documentation (12 files)
   frontend/    React app (Phase 1)
   backend/     FastAPI app (Phase 3)
-  .env.example placeholders only (Planned; added in Task 0.2)
+  .env.example placeholders only (reported as part of the initial commit b791e59)
 ```
 
 ## 4. Backend module boundaries (Planned)
@@ -111,13 +111,14 @@ Statuses: **Accepted** (from the project brief or approved), **Proposed** (not y
 
 ### Local toolchain observations (Task 0.2)
 
-Reported by the developer on 2026-10-25 from their Windows machine. The AI has not verified these independently. They are observations, not decisions: they do not resolve D-005 and no Python, PostgreSQL or npm version has been selected.
+Reported by the developer on 2026-10-25 from their Windows machine. The AI has not verified these independently. They are observations, not decisions: they do not resolve D-005, and no Python, PostgreSQL or npm version has been selected as a project requirement.
 
 | Tool | Observation |
 |---|---|
 | Node.js | v22.15.0 |
 | Git | 2.49.0.windows.1 |
 | Python | 3.11.0 is available through `python`; 3.13.3 is available through `py`. Which interpreter the backend will use is not decided (D-005) |
-| npm (bundled CLI) | 10.9.2 when invoked directly through `C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js` |
-| npm (ordinary `npm` command) | Reports 6.14.18. Unresolved; needs a safe follow-up investigation (PHASE_TRACKER KI-004) |
-| PostgreSQL | Not yet reported |
+| npm (bundled CLI) | 10.9.2, invoked with `node "C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js"` |
+| npm (ordinary `npm` command) | Still resolves to 6.14.18 (a user-level install found through the configured npm prefix). Accepted workaround: use the bundled CLI explicitly; PATH is unchanged and neither npm package was removed (PHASE_TRACKER KI-004) |
+| PostgreSQL | 18.1 installed and running as the Windows service `postgresql-x64-18`; accepting connections on localhost:5432. Native installation follows D-006; the installed version is an observation and D-005 remains Proposed |
+| Docker | CLI 29.4.0 installed; the Docker engine is not reachable. Docker is optional (D-006) and is not required |

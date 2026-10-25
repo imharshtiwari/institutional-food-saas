@@ -50,4 +50,4 @@ Before a Git checkpoint: relevant tests pass, linting/type checks pass (once con
 
 ## 7. Task 0.1 checks
 
-Structural documentation checks only (file presence, status vocabulary, links, role/phase consistency, secret-like values). Results appear in the hand-off report.
+Structural documentation checks only (file presence, status vocabulary, links, role/phase consistency, secret-like values). Results are recorded in PHASE_TRACKER §3.

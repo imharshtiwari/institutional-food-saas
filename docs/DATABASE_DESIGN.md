@@ -5,7 +5,7 @@
 
 Database: PostgreSQL. Access via SQLAlchemy. Schema changes only through Alembic migrations.
 
-## 1. Conventions (Proposed; see decisions D-008, D-009)
+## 1. Conventions (Accepted; see decisions D-008, D-009)
 
 - Primary keys: UUID for exposed entities.
 - Every tenant-owned table has a non-null `tenant_id`, indexed, and included in composite keys and foreign keys where it prevents cross-tenant references.

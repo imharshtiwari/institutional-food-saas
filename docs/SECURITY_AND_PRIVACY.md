@@ -5,7 +5,7 @@
 
 ## 1. Secrets and configuration
 
-- Never commit secrets or production credentials. `.env` files must be git-ignored; a `.env.example` (Planned, Task 0.2) will contain placeholders only.
+- Never commit secrets or production credentials. `.env` files must be git-ignored; a `.env.example` containing placeholders only is reported as part of the initial commit (b791e59); confirming that it holds placeholders only is part of the outstanding staging-area confirmation (PHASE_TRACKER §2).
 - Production secrets live in the hosting environment's secret store (decided in Phase 11).
 - Review `git diff` before every commit.
 

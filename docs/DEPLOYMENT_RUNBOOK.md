@@ -13,14 +13,16 @@
 
 Hosting provider is undecided (D-013).
 
-## 2. Local prerequisites (versions confirmed in Task 0.2 and Phases 1/3)
+## 2. Local prerequisites (observations recorded; version selection stays under D-005)
 
-Git; Node.js (LTS) with npm; Python; PostgreSQL (native Windows installer, D-006); VS Code. Record the verified versions in ARCHITECTURE §11 once confirmed on the developer's machine.
+Git; Node.js (LTS) with npm; Python; PostgreSQL (native Windows installation, D-006); VS Code. Installed versions observed on the developer's machine are recorded in ARCHITECTURE §11. They are observations, not version selections.
+
+**npm on this machine (KI-004):** the ordinary `npm` command resolves to 6.14.18. Use the bundled npm CLI explicitly: `node "C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js" <arguments>`. Do not change PATH or uninstall either npm package without a new decision.
 
 ## 3. Local setup for Phase 0 (PowerShell)
 
 ```powershell
-cd path\to\institutional-food-platform
+cd path\to\institutional-food-saas
 git init
 git status
 git add .
@@ -30,9 +32,11 @@ git commit -m "chore: project foundation and documentation (Phase 0, Task 0.1)"
 
 Review `git diff --staged` for secrets or unwanted files before committing. Frontend and backend setup steps are added in Phases 1 and 3.
 
+The initial commit has been made (developer-reported): branch `master`, commit b791e59, message "chore: establish project foundation", 19 files. The commands above are the reference procedure; the commit message used differs from the example.
+
 ## 4. Configuration
 
-Use environment variables. Once `.env.example` exists (Task 0.2), copy it to `.env` locally; `.env` is never committed. Production values come from the hosting secret store.
+Use environment variables. Copy `.env.example` (reported as part of the initial commit) to `.env` locally; `.env` is never committed. Production values come from the hosting secret store.
 
 ## 5. Database operations (Planned, Phase 3 onward)
 
