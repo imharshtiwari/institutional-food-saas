@@ -34,7 +34,3 @@ Multi-tenant SaaS for university dining, hostels, campus food contractors, facul
 - Work happens phase by phase. See `docs/PHASE_TRACKER.md`.
 - Never commit `.env` files, credentials, build output or dependency folders.
 - If two documents disagree, stop and resolve the conflict before writing code.
-=======
-# institutional-food-saas
-saas product
->>>>>>> cfdcdb338308f7187a81170036dd958866441d9f
